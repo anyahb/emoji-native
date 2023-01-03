@@ -1,0 +1,106 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url("./img/landview.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.emoji__input {
+    height: 30px;
+    background-color: transparent;
+    border: 0px solid;
+}
+
+
+
+
+
+.main {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    height: 100%;
+    align-items: center;
+    min-height: 100vh;
+}
+
+
+
+.form {
+    background: rgb(232, 233, 237);
+    height: 300px;
+    overflow: scroll;
+    width: 700px;
+    display: grid;
+    padding-top: 10px;
+    border-radius: 10px;
+    align-content: baseline;
+    justify-items: center;
+}
+
+input[type=text] {
+    font-size: 18px;
+    color: darkgray;
+    width: 100%;
+    padding-left: 20px;
+    border-bottom: 1px solid #bbb;
+}
+
+*:focus {
+    outline: none;
+}
+
+.form__container {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin: 20px;
+    width: initial;
+    width: 90%;
+    justify-content: flex-start;
+}
+
+
+.emoji__container {
+    display: none;
+    justify-content: center;
+    font-size: 30px;
+}
+
+@media screen and (max-width: 900px) {
+.form {
+    width: 600px;
+}
+
+}
+
+
+@media screen and (max-width: 700px) {
+.form {
+    width: 500px;
+}
+
+}
+
+@media screen and (max-width: 600px) {
+.form {
+    width: 400px;
+}
+
+}
+
+@media screen and (max-width: 480px) {
+.form {
+    width: 300px;
+}
+
+}
+
+
+

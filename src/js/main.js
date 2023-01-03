@@ -12,29 +12,31 @@ const drawElements = (arr, container) => {
     arr.forEach(item => {
         const emojiItem = document.createElement('div')
         emojiItem.classList.add('emoji__item')
-        emojiItem.textContent = `${item.symbol} ${item.title}`
+        emojiItem.textContent = `${item.symbol} ` //ubrala ${item.title}
         container.append(emojiItem)
     })
 }
 
 function createList(val,arr){
     const emojiContainer = document.querySelector('.emoji__container')
-    emojiContainer.innerHTML = ''
+    const formContainer = document.querySelector('.form__container')
+    emojiContainer.innerHTML = '' //clear the container
+    formContainer.innerHTML = '' //clear the container
 
     if(val === ''){
-        drawElements(emojiListFirst10, emojiContainer)
+        drawElements(emojiListFirst10, formContainer)
     } else {
         const filteredArr = [] // [{title: '', symbol: ''},{},{}]
         arr.forEach(item => {
-            const title = item.keywords.toLowerCase()
+            const keywords = item.keywords.toLowerCase()
             const value = val.toLowerCase()
 
-            if(title.indexOf(value) > -1){ //indexOf работает так, что если он что-то нашел, то он показывает индекс, а если не нашел, то он показывает -1
+            if(keywords.indexOf(value) > -1){ //indexOf работает так, что если он что-то нашел, то он показывает индекс, а если не нашел, то он показывает -1
                 filteredArr.push(item)
                 // console.log(newArr)
             }
         })
-        drawElements(filteredArr, emojiContainer)
+        drawElements(filteredArr, formContainer)
     }
 
 }
@@ -61,7 +63,6 @@ function getEmojis(){
 }
 
 getEmojis()
-
 
 // 1. Сделать красиво, можно для мобилки стили придумать
 // 2. Задачки на вынос функции
