@@ -17,10 +17,6 @@ body {
     border: 0px solid;
 }
 
-
-
-
-
 .main {
     display: flex;
     justify-content: center;
@@ -30,18 +26,17 @@ body {
     min-height: 100vh;
 }
 
-
-
 .form {
     background: rgb(232, 233, 237);
     height: 300px;
-    overflow: scroll;
     width: 700px;
     display: grid;
     padding-top: 10px;
     border-radius: 10px;
     align-content: baseline;
     justify-items: center;
+    overflow-x: hidden;
+    overflow-y: scroll;
 }
 
 input[type=text] {
@@ -59,18 +54,22 @@ input[type=text] {
 .form__container {
     display: flex;
     gap: 8px;
+    width: 100%;
+    margin: 10px;
     flex-wrap: wrap;
-    margin: 20px;
-    width: initial;
-    width: 90%;
-    justify-content: flex-start;
+    justify-self: flex-start;
 }
-
 
 .emoji__container {
     display: none;
     justify-content: center;
     font-size: 30px;
+}
+
+.emoji__item {
+    width: 32px;
+    display: grid;
+    justify-items: center;
 }
 
 @media screen and (max-width: 900px) {
